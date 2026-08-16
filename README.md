@@ -2,16 +2,33 @@
 
 Implemented the core components of **PaliGemma from scratch in PyTorch**, covering the vision encoder, language model, multimodal integration, preprocessing, and inference pipeline.
 
-### Core Components
+## Essential Files
 
- #### modeling_siglip.py— Implements the SigLIP vision encoder to convert images into visual embeddings.
+The following files contain the core components required to understand and implement PaliGemma:
 
- ####   modeling_gemma.py — Implements the Gemma Transformer language model for processing text and visual embeddings.
+- **`modeling_siglip.py`** — Implements the SigLIP vision encoder for converting images into visual embeddings.
 
-#### Multimodal Projector — Projects SigLIP visual embeddings into Gemma's embedding space to enable vision-language integration.
+- **`modeling_gemma.py`** — Implements the Gemma Transformer language model for processing text and visual embeddings.
 
-####  PaliGemmaForConditionalGeneration — Integrates SigLIP, the multimodal projector, and Gemma into a unified vision-language model.
+- **`processing_paligemma.py`** — Handles image preprocessing, text tokenization, image tokens, attention masks, and model input preparation.
 
-####  processing_paligemma.py— Handles image preprocessing, text tokenization, image tokens, attention masks, and model input preparation.
+- **`inference.py`** — Implements autoregressive generation and KV caching for efficient inference.
 
-#### inference.py — Implements autoregressive generation with next-token prediction and KV caching for efficient inference.
+- **`utils.py`** — Provides supporting utility functions required by the implementation.
+
+### Core Architecture
+
+```text
+Image
+  ↓
+SigLIP (`modeling_siglip.py`)
+  ↓
+Visual Embeddings
+  ↓
+Multimodal Projection
+  ↓
+Gemma (`modeling_gemma.py`)
+  ↓
+Next Token Prediction
+  ↓
+Generated Text
