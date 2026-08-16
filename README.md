@@ -18,7 +18,7 @@ The following files contain the core components required to understand and imple
 
 ### Core Architecture
 
-```text
+
 Image
   ↓
 SigLIP (`modeling_siglip.py`)
