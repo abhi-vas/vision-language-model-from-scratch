@@ -1,5 +1,4 @@
 ## PaliGemma Implementation
-
 Implemented the core components of **PaliGemma from scratch in PyTorch**, covering the vision encoder, language model, multimodal integration, preprocessing, and inference pipeline.
 
 ## Essential Files
