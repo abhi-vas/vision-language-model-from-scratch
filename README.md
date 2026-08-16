@@ -3,7 +3,6 @@
 Implemented the core components of **PaliGemma from scratch in PyTorch**, covering the vision encoder, language model, multimodal integration, preprocessing, and inference pipeline.
 
 ## Essential Files
-
 The following files contain the core components required to understand and implement PaliGemma:
 
 - **modeling_siglip.py** — Implements the SigLIP vision encoder for converting images into visual embeddings.
